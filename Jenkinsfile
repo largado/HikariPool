@@ -2,9 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage ('Inicial') {
+        stage ('Construindo Imagem') {
             steps {
-                echo 'Iniciando a pipeline / esteira'
+                script{
+                    dockerapp = docker.build("avena/Hikari-pool", '-f ./src/Dockerfile ./src')
+                }
+                echo 'Imagem construída com sucesso'
             }
         }
     }
