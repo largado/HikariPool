@@ -4,5 +4,6 @@ WORKDIR /usr/src/validaidm/
 RUN cd /usr/src/validaidm/
 RUN ls
 RUN chmod u+x mvnw
+RUN apk add --no-cache java
 RUN ./mvnw clean compile assembly:single
 RUN java -jar TestaIdm.jar
