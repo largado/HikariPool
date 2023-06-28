@@ -6,5 +6,4 @@ RUN ls
 RUN chmod u+x mvnw
 RUN apk add --no-cache openjdk11
 RUN ./mvnw clean
-RUN ./mvnw build
 RUN java -jar TestaIdm.jar
