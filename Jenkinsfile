@@ -7,7 +7,7 @@ pipeline {
                 script{
                     dockerapp = docker.build("avena/hikari-pool", '-f ./src/Dockerfile ./src')
                 }
-                echo 'Imagem construída com suces'
+                echo 'Imagem construída com suce'
             }
         }
     }
