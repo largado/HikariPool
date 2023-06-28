@@ -1,5 +1,5 @@
 FROM alpine:3.14
 COPY . /usr/src/validaidm
 WORKDIR /usr/src/validaidm
-CMD ["mvn", "clean", "compile", "assembly:single"]
-CMD ["java", "-jar", "TestaIdm.jar"]
+RUN mvn clean compile assembly:single
+RUN java -jar TestaIdm.jar
