@@ -1,4 +1,4 @@
-FROM openjdk:18
+FROM alpine:3.14
 COPY . /usr/src/validaidm
 WORKDIR /usr/src/validaidm
 CMD ["mvn", "clean", "compile", "assembly:single"]
