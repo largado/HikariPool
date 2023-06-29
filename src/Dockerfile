@@ -6,4 +6,5 @@ RUN ls
 RUN chmod u+x mvnw
 RUN apk add --no-cache openjdk11
 RUN ./mvnw clean package
+RUN cd target
 RUN ls
