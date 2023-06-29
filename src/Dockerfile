@@ -6,7 +6,7 @@ RUN ls
 RUN chmod u+x mvnw
 RUN apk add --no-cache openjdk11
 RUN ./mvnw clean package
-RUN find . -name *.jar
+RUN java -jar ./target/spring-data-0.0.1-SNAPSHOT.jar
 #RUN ls
 #RUN ls /usr/src/validaidm/out/articacts/spring_data_jar
 #RUN java -jar /usr/src/validaidm/out/articacts/spring_data_jar/spring-data.jar
